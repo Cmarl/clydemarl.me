@@ -5,16 +5,15 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title Clyde Marl
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
     link(type='text/css' rel='stylesheet' href='index.css')
-    style(type='text/css')
   body
-    nav#myNavbar.navbar.navbar-default.navbar-inverse.navbar-fixed-top
+    nav#myNavbar.navbar.navbar-inverse.navbar-default.navbar-fixed-top(role="navigation")
       .container
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbarCollapse')
@@ -23,20 +22,16 @@ html
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='#') Clyde Marl
-        .collapse.navbar-collapse#navBarcollapse
+        .collapse.navbar-collapse#navbarCollapse
           ul.nav.navbar-nav
             li: a(href='https://www.linkedin.com/pub/clyde-marl/26/46a/282', target='_blank')
               i.fa.fa-linkedin-square LinkedIn
             li: a(href='https://github.com/Cmarl', target='_blank')
               i.fa.fa-github-square GitHub
-            li: a(href='http://design.clydemarl.me/')
-              i.fa.fa-paint-brush Portfolio
             li: a(href='https://twitter.com/clydemarl', target='_blank')
               i.fa.fa-twitter-square Twitter
             li: a(href='http://stackoverflow.com/users/4298145/marlcg58', target='_blank')
               i.fa.fa-stack-overflow Stack Overflow
-            li: a(href='https://www.quora.com/Clyde-Marl', target='_blank')
-              i.fa.fa-external-link-square Quora
     .container
       .row
         .col-xs-12
@@ -48,90 +43,86 @@ html
     .container
       .page-header
         h2#timeline Experience Timeline
-      ul.timeline
-        li
-          .timeline-badge.success
-            i.fa.fa-laptop
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title Coding House
-              p
-                small.text-muted
-                  i.fa.fa-calendar  Present
-            .timeline-body
-              ul
-                li Accepted to Coding House, an immersive web development training program.
-                li Started prep-work for program.
-        li.timeline-inverted
-          .timeline-badge.warning
-            i.fa.fa-bar-chart
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title Training to Write Code
-              p
-                small.text-muted
-                  i.fa.fa-calendar  2014
-            .timeline-body
-              ul
-                li Started training to code with Ruby and Javascript for web development.
-                li Worked through CodeAcademy.com javascript, Ruby, and HTML/CSS tracks.
-        li
-          .timeline-badge.danger
-            i.fa.fa-briefcase
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title Progressive Insurance - Claims Associate
-              p
-                small.text-muted
-                  i.fa.fa-calendar  2013
-            .timeline-body
-              ul
-                li Handled negotiation of losses, Vehicle repair logistics, and legal requirements on constant revolving inventory of 30-40 claims.
-                li Provided high-level customer service while still keeping an eye out for possible insurance fraud.
-                li Referred cases indicated money paid could be recovered to subrogation.
-        li.timeline-inverted
-          .timeline-badge: i.fa.fa-phone
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title Time Warner Cable - Inbound Sales
-              p: small.text-muted: i.fa.fa-calendar  2012
-            .timeline-body
-              ul
-                li Answered inbound residential customer calls and covered the full range of Time Warner Cable services, while also obtaining all information necessary for the resolution of transactions.
-                li Achieved sales standards by presenting marketing/sales campaigns to existing and prospective clients through a consultative sales approach.
-                li Handles calls from the greater North East Region including NYC.
-        li
-          .timeline-badge.warning: i.fa.fa-truck
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title Farrell Oil Company - Warehouse Assistant
-              p: small.text-muted: i.fa.fa-calendar  2005 - 2012
-            .timeline-body
-              ul
-                li Devised and implemented changes to re-packaging system, eliminating approximately 40 gallons of wasted oil per month.
-                li Helped load trucks, accepted deliveries, and took inventory.
-        li.timeline-inverted
-          .timeline-badge.success: i.fa.fa-gavel
-          .timeline-panel
-            .timeline-heading
-            h4.timeline-title RightsFlow - Sales & Marketing Intern
-            p: small.text-muted: i.fa.fa-calendar  2011
-            .timeline-body
-              ul
-                li Worked directly with SVP of Corporate Communications and Content and VP of Artist + Community Relations.
-                li Revised and edited Limelight blog postings using SEO principles and boosted 300+ number pages Google search engine rankings.
-                li Prospected 1000+ # artists, record labels, church groups, and assorted verticals of sales offerings.
-        li
-          .timeline-badge.danger: i.fa.fa-leanpub
-          .timeline-panel
-            .timeline-heading
-              h4.timeline-title SUNY Oneonta - B.A Music Industry
-              p: small.text-muted: i.fa.fa-calendar  2011
-            .timeline-body
-              ul
-                li Legal Issues in the Music Industry
-                li Marketing
-                li Management
+      .row
+        .col-xs-10.col-xs-offset-1
+          ul.timeline
+            li
+              .timeline-badge.success
+                i.fa.fa-laptop
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title Coding House
+                  p: small.text-muted: i.fa.fa-calendar  Present
+                .timeline-body
+                  ul
+                    li Accepted to Coding House, an immersive web development training program.
+                    li Started prep-work for program.
+            li.timeline-inverted
+              .timeline-badge.warning
+                i.fa.fa-bar-chart
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title Training to Write Code
+                  p: small.text-muted: i.fa.fa-calendar  2014
+                .timeline-body
+                  ul
+                    li Started training to code with Ruby and Javascript for web development.
+                    li Worked through CodeAcademy.com javascript, Ruby, and HTML/CSS tracks.
+            li
+              .timeline-badge.danger
+                i.fa.fa-briefcase
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title Progressive Insurance - Claims Associate
+                  p: small.text-muted: i.fa.fa-calendar  2013
+                .timeline-body
+                  ul
+                    li Handled negotiation of losses, Vehicle repair logistics, and legal requirements on constant revolving inventory of 30-40 claims.
+                    li Provided high-level customer service while still keeping an eye out for possible insurance fraud.
+                    li Referred cases indicated money paid could be recovered to subrogation.
+            li.timeline-inverted
+              .timeline-badge: i.fa.fa-phone
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title Time Warner Cable - Inbound Sales
+                  p: small.text-muted: i.fa.fa-calendar  2012
+                .timeline-body
+                  ul
+                    li Answered inbound residential customer calls and covered the full range of Time Warner Cable services, while also obtaining all information necessary for the resolution of transactions.
+                    li Achieved sales standards by presenting marketing/sales campaigns to existing and prospective clients through a consultative sales approach.
+                    li Handles calls from the greater North East Region including NYC.
+            li
+              .timeline-badge.warning: i.fa.fa-truck
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title Farrell Oil Company - Warehouse Assistant
+                  p: small.text-muted: i.fa.fa-calendar  2005 - 2012
+                .timeline-body
+                  ul
+                    li Devised and implemented changes to re-packaging system, eliminating approximately 40 gallons of wasted oil per month.
+                    li Helped load trucks, accepted deliveries, and took inventory.
+            li.timeline-inverted
+              .timeline-badge.success: i.fa.fa-gavel
+              .timeline-panel
+                .timeline-heading
+                h4.timeline-title RightsFlow - Sales & Marketing Intern
+                p: small.text-muted: i.fa.fa-calendar  2011
+                .timeline-body
+                  ul
+                    li Worked directly with SVP of Corporate Communications and Content and VP of Artist + Community Relations.
+                    li Revised and edited Limelight blog postings using SEO principles and boosted 300+ number pages Google search engine rankings.
+                    li Prospected 1000+ # artists, record labels, church groups, and assorted verticals of sales offerings.
+            li
+              .timeline-badge.danger: i.fa.fa-leanpub
+              .timeline-panel
+                .timeline-heading
+                  h4.timeline-title SUNY Oneonta - B.A Music Industry
+                  p: small.text-muted: i.fa.fa-calendar  2011
+                .timeline-body
+                  ul
+                    li Legal Issues in the Music Industry
+                    li Marketing
+                    li Management
   footer
     script(src='/index.js')
     #container
